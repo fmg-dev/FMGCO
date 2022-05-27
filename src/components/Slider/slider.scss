@@ -1,0 +1,80 @@
+hr {
+    position: relative;
+    height: none;
+    border: 1px solid rgba($color: #2c3e50, $alpha: 0.2);
+    width: 90%;
+    margin: 0 auto;
+    @media only screen and (max-width: 767px) {
+        display: none;
+      }
+}
+
+.slider {
+    overflow-x: hidden;
+    height: 480px;
+    background: white;
+    margin-bottom: 0;
+    @media only screen and (max-width: 767px) {
+        display: none;
+      }
+
+    .slider__container {
+        position: relative;
+        height: 420px;
+
+        a {
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        &__img {
+            position: absolute;
+            z-index: 12;
+            width: 300px;
+            object-fit: contain;
+            height: 300px;
+            top: 90px;
+            right: 250px;
+            background: transparent;
+
+        }
+
+        &__text {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 60px;
+            left: 100px;
+            z-index: 10000;
+            p {
+                margin-top: 20px;
+            }
+
+            &__category {
+                text-transform: capitalize;
+            }
+
+            &__description {
+                font-weight: 500;
+                z-index: 12324;
+            }
+
+            
+
+            &__title {
+                font-size: 1.5rem;
+                &:hover {
+                    color: rgba($color: #2c3e50, $alpha: 0.5);
+                }
+            }
+
+            &__price {
+                margin-top: 20px;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
