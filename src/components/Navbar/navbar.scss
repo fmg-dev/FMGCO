@@ -9,6 +9,23 @@
     background: transparent;
     z-index: 1000;
     border-bottom: 1px solid rgba($color: #2c3e50, $alpha: 0.2);
+    color: #2c3e50;
+::placeholder {
+    color: #2c3e50;
+}
+    &.active {
+        background-color: rgba($color: #2c3e50, $alpha: 0.6);
+        border: none;
+        z-index: 100000;
+        * {
+            border-color: white;
+            color: white;
+            
+        }
+        ::placeholder {
+            color: white;
+        }
+    }
 
     @media (max-width: 767px) {
         display: flex;
@@ -18,13 +35,12 @@
         margin: 0;
         margin-bottom: 5px;
         background: transparent;
-        position: relative;
+        position: sticky;
     }
 
     a {
         text-decoration: none;
         color: #2c3e50;
-        
     }
 
     &__left {
@@ -33,8 +49,7 @@
         align-items: center;
         justify-content: center;
         color: #2c3e50;
-
-
+        
         &:hover {
             color: rgba($color: #2c3e50, $alpha: 0.9);
             transform: scale(1.06);
@@ -78,14 +93,14 @@
         display: flex;
         align-items: center;
 
-        
+
 
         &__list {
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 600;
-            
+
             &__listItem {
                 display: flex;
                 align-items: center;
@@ -94,6 +109,7 @@
                 color: #2c3e50;
                 text-transform: uppercase;
                 padding: 0 10px;
+
                 &:hover {
                     text-decoration: underline;
                     transform: scale(1.05);

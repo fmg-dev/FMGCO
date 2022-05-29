@@ -1,0 +1,47 @@
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    font-size: 24px;
+    @media (max-width: 767px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    h1 {
+        margin: 0;
+    }
+    h4 {
+        margin-bottom: 15px;
+    }
+    ::placeholder {
+        color: #2c3e50;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #2c3e50;
+        padding: 5px;
+        input {
+            color: #2c3e50;
+            font-size:18px;
+            border: none;
+            outline: none;
+        }
+        button {
+            color: #2c3e50;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            &:hover {
+                color: rgba($color: #2c3e50, $alpha: 0.9);
+            }
+        }
+    }
+}

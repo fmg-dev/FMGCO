@@ -1,0 +1,133 @@
+.product {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: #2c3e50;
+
+        &:hover {
+            color: rgba($color: #2c3e50, $alpha: 0.9);
+        }
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        border: 1px solid #2c3e50;
+        height: 240px;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 20px;
+
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 480px;
+            overflow-x: hidden;
+            width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        img {
+            min-width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            @media (max-width: 767px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto 0;
+            }
+
+            &__button {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+
+                &__left {
+                    display: flex;
+                    align-items: center;
+
+                    @media (max-width: 767px) {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    &__icon {
+                        cursor: pointer;
+                        margin-right: 10px;
+                        color: #2c3e50;
+
+
+                        &:active {
+                            border-radius: 50%;
+                            background: #2c3e50;
+                            color: white;
+                        }
+                    }
+                }
+
+                &__right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @media (max-width: 767px) {
+                        margin-top: 10px;
+                    }
+
+                    &__icon {
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #2c3e50;
+                        &:active {
+                            border-radius: 50%;
+                            background: #2c3e50;
+                            color: white;
+                        }
+                    }
+                }
+
+                p {
+                    margin-right: 10px;
+                    font-size: 24px;
+                    color: #2c3e50;
+                }
+
+            }
+
+            h4 {
+                display: flex;
+                align-items: flex-start;
+                margin: 10px 0;
+                margin-top: 0;
+                font-size: 1.5rem;
+            }
+
+            h6 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+}

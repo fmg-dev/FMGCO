@@ -1,0 +1,118 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    color: #2e3c52;
+    border-top: 1px solid rgba($color: #2c3e52, $alpha: 0.2);
+    @media (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #2e3c52;
+
+        a {
+            text-decoration: none;
+            color: #2e3c52;
+            margin: 0;
+            padding: 0;
+
+            &:hover {
+                color: rgba($color: #2c3e52, $alpha: 0.9);
+            }
+        }
+
+        &__logo {
+            font-size: 32px;
+
+        }
+
+        ul {
+            margin-top: 10px;
+            list-style: none;
+            font-weight: 500;
+
+            li {
+                margin: 10px 0;
+                cursor: pointer;
+                &:hover {
+                    color: rgba($color: #2c3e52, $alpha: 0.9);
+                }
+            }
+        }
+    }
+
+    &__center {
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+        }
+        display: flex;
+        align-items: center;
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            color: #2c3e52;
+            
+            li {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+                cursor: pointer;
+                
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: #2c3e52;
+                    text-decoration: none;
+                    @media (max-width: 767px) {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                    &:hover {
+                        color: rgba($color: #2c3e52, $alpha: 0.9);
+                    }
+                }
+                &:hover {
+                    color: rgba($color: #2c3e52, $alpha: 0.9);
+                }
+            }
+
+        }
+
+        &__icon {
+            margin-right: 5px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+        @media (max-width: 767px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h6 {
+            margin-bottom: 10px;
+        }
+        &__img {
+            display: flex;
+            justify-content: end;
+            object-fit: cover;
+        }
+    }
+}

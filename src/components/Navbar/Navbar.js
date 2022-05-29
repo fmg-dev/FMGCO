@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.scss";
+
+
 //!!!!! MATERIAL UI !!!!!
 
 //!!!!! ICON !!!!!
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { Link } from "react-router-dom";
-import Badge from '@mui/material/Badge';
-import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
-  '& .MuiBadge-badge': {
+  "& .MuiBadge-badge": {
     right: 0,
     top: 0,
     color: "red",
@@ -19,14 +21,30 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 function Navbar() {
+  const [navbar, setNavbar] = useState();
+
+  const changeBackground = () => {
+    if (window.scrollY >= 66) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+ 
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground);
+  });
+
   return (
-    <div className="navbar">
+    <nav className={navbar ? "navbar active" : "navbar"}>
       <div className="navbar__left">
         <h1>
           <Link to={"/"}>FMG E-CO</Link>
         </h1>
       </div>
-      <div className="navbar__center">
+      <div className={navbar ? "navbar__center active" : "navbar__center"}>
         <input
           type="text"
           className="navbar__center__input"
@@ -44,8 +62,8 @@ function Navbar() {
           </li>
           <li className="navbar__right__list__listItem">
             <Link to={"cart"}>
-              <IconButton  aria-label="cart">
-                <StyledBadge  badgeContent={4} >
+              <IconButton aria-label="cart">
+                <StyledBadge badgeContent={4}>
                   <ShoppingCartRoundedIcon className="navbar__right__list__cart" />
                 </StyledBadge>
               </IconButton>
@@ -53,7 +71,7 @@ function Navbar() {
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }
 

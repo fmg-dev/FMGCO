@@ -1,0 +1,31 @@
+.signUp {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin: 50px auto auto;
+    color: #2c3e50;
+    ::placeholder {
+        color: #2c3e50;
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        &__form {
+        display: flex;
+        flex-direction: column;
+        
+            padding: 5px;
+            &__input {
+                margin-bottom: 10px;
+                font-size:18px;
+                padding: 5px;
+                outline: none;
+            }
+        
+        
+        }
+       
+    }
+}

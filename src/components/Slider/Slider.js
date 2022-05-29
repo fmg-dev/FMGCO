@@ -11,18 +11,20 @@ function Sliders() {
   const [readMore, setReadMore] = useState(false);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=10")
+    fetch("https://fakestoreapi.com/products?limit=5")
       .then((response) => response.json())
       .then((response) => setOffer(response));
   }, []);
 
   const settings = {
-    infinite: true,
+    arrows: true,
     autoplay: true,
-    dots: true,
+    dots: false,
     speed: 1000,
     slidesToShow: 1,
-    arrows: true,
+    pauseOnHover: true,
+
+
   };
   return (
     <>
@@ -37,7 +39,7 @@ function Sliders() {
                   alt=""
                 />
                 <div className="slider__container__text">
-                  <Link to={"/product"}>
+                  <Link to={`${item.title}`}>
                     <h2 className="slider__container__text__title">
                       {item.title}
                     </h2>
