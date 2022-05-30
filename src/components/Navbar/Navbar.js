@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.scss";
-
+import {useStateValue} from "../StateProvider"
 
 //!!!!! MATERIAL UI !!!!!
 
@@ -22,6 +22,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 function Navbar() {
   const [navbar, setNavbar] = useState();
+  const [{cart}] = useStateValue()
 
   const changeBackground = () => {
     if (window.scrollY >= 66) {
@@ -30,8 +31,6 @@ function Navbar() {
       setNavbar(false);
     }
   };
-
- 
 
   useEffect(() => {
     window.addEventListener("scroll", changeBackground);
@@ -62,8 +61,8 @@ function Navbar() {
           </li>
           <li className="navbar__right__list__listItem">
             <Link to={"cart"}>
-              <IconButton aria-label="cart">
-                <StyledBadge badgeContent={4}>
+              <IconButton disableRipple aria-label="cart">
+                <StyledBadge badgeContent={cart?.length}>
                   <ShoppingCartRoundedIcon className="navbar__right__list__cart" />
                 </StyledBadge>
               </IconButton>

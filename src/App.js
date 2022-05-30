@@ -9,6 +9,7 @@ import Products from "./pages/Products/Products";
 import SignUp from "./pages/SignUp/SignUp";
 import Cart from "./pages/Cart/Cart";
 
+
 function App() {
   return (
     <BrowserRouter>

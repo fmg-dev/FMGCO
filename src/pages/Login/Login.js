@@ -9,7 +9,7 @@ function Login() {
         <div className="login__container__form">
           <input
             type="text"
-            placeholder="Email or Username"
+            placeholder="Email"
             className="login__container__form__input"
           />
           <input

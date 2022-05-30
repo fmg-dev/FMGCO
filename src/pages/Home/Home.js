@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Campaign from '../../components/Campaign/Campaign'
-import Product from '../../components/Products/Products'
+import Sidebar from '../../components/Sidebar/Sidebar';
 import Slider from '../../components/Slider/Slider'
-
+import "./home.scss"
 function Home() {
+  // const [sidebar, setSidebar] = useState()
+ 
+  // const sidebarAdded = () => {
+  //   if (window.scrollY >= 66) {
+  //     setSidebar(true);
+  //   } else {
+  //     setSidebar(false);
+  //   }
+  // };
+  // useEffect(() => {
+  //   window.addEventListener("scroll", sidebarAdded);
+  // });
   return (
-    <div>
+    <div className='home'>
+      {/* {sidebar ? <Sidebar/> : ""} */}
       <Slider />
-      <Campaign/>
+      <Campaign />
     </div>
   )
 }
