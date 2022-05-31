@@ -1,12 +1,11 @@
 .cart__right {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     flex: 3;
     position: sticky;
     top: 54px;
     position: -webkit-sticky;
-    height: 240px;
     background: transparent;
     border: 1px solid rgba($color: #2c3e50, $alpha: 0.9);
     border-radius: 20px;
@@ -46,6 +45,5 @@
     &__form {
         display: flex;
         flex-direction: column;
-        
     }
 }

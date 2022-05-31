@@ -5,7 +5,7 @@ function Campaign() {
   const [campaigns, setCampaigns] = useState([]);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/6")
+    fetch("https://fakestoreapi.com/products/1")
       .then((response) => response.json())
       .then((response) => setCampaigns(response));
   }, []);

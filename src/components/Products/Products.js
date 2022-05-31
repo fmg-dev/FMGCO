@@ -8,7 +8,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useStateValue } from "../StateProvider";
 
 function Products({ id, image, title, price }) {
-
   const [{ cart }, dispatch] = useStateValue();
 
   const addToCart = () => {
@@ -31,7 +30,7 @@ function Products({ id, image, title, price }) {
         </div>
         <div className="products__container__bottom">
           <h4 className="products__container__bottom__title">
-            <Link to={"/products"} title={title}>
+            <Link to={"/singleproduct"} title={title}>
               {title}
             </Link>
           </h4>
@@ -40,7 +39,7 @@ function Products({ id, image, title, price }) {
         </div>
         <div className="products__container__buttons">
           <button onClick={addToCart}>
-            <AddShoppingCartIcon  />
+            <AddShoppingCartIcon />
           </button>
           <button>
             <SearchIcon />

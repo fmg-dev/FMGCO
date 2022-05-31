@@ -27,7 +27,7 @@ function CartProduct({ id, title, image, price }) {
             <img src={image} alt="" />
           </div>
           <div className="product__container__text">
-            <Link to={`/`}>
+            <Link to={`/singleproduct`}>
               <h4>{title}</h4>
             </Link>
             <h6>${price}</h6>

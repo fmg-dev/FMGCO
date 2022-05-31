@@ -4,6 +4,7 @@ import "./campaingCartProduct.scss";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import SearchIcon from "@mui/icons-material/Search";
 import { useStateValue } from "../StateProvider";
+import { Link } from "react-router-dom";
 
 function Campaign({ id, title, image, price }) {
   const [readMore, setReadMore] = useState(false);
@@ -25,7 +26,9 @@ function Campaign({ id, title, image, price }) {
       <h1>Campaigns</h1>
       <div key={id} className="campaign__container">
         <div className="campaign__container__card">
-          <h4>{title}</h4>
+          <Link to={"/singleproduct"}>
+            <h4>{title}</h4>
+          </Link>
           <img src={image} alt="" />
           <h5>${price}</h5>
           <div className="campaign__container__card__buttons">

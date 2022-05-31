@@ -8,7 +8,8 @@ import Login from "./pages/Login/Login";
 import Products from "./pages/Products/Products";
 import SignUp from "./pages/SignUp/SignUp";
 import Cart from "./pages/Cart/Cart";
-
+import SingleProductPage from "./pages/SingleProduct/SingleProductPage";
+import PayPage from "./pages/Pay/PayPage";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/singleproduct" element={<SingleProductPage />} />
+        <Route path="/paypage" element={<PayPage />} />
       </Routes>
       <Newsletter />
       <Footer />
