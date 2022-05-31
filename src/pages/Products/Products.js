@@ -1,14 +1,12 @@
-import React from 'react'
-import Product from '../../components/Product/Product'
-
-
+import React from "react";
+import Product from "../../components/Product/Product";
 
 function Products() {
   return (
     <div>
-      <Product/>
+      <Product />
     </div>
-  )
+  );
 }
 
-export default Products
+export default Products;

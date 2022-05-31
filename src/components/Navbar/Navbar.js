@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.scss";
-import {useStateValue} from "../StateProvider"
+import { useStateValue } from "../StateProvider";
 
 //!!!!! MATERIAL UI !!!!!
 
@@ -22,7 +22,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 function Navbar() {
   const [navbar, setNavbar] = useState();
-  const [{cart}] = useStateValue()
+  const [{ cart }] = useStateValue();
 
   const changeBackground = () => {
     if (window.scrollY >= 66) {

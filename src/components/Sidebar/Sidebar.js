@@ -1,13 +1,13 @@
-import React from 'react'
-import Category from "../Category/Category"
-import "./sidebar.scss"
+import React from "react";
+import Category from "../Category/Category";
+import "./sidebar.scss";
 
 function Sidebar() {
   return (
-      <div className='sidebar'>
-          <Category/>
+    <div className="sidebar">
+      <Category />
     </div>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

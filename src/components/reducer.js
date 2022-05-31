@@ -1,4 +1,3 @@
-
 export const initialState = {
   cart: [],
   user: null,
@@ -18,7 +17,7 @@ function reducer(state, action) {
     case "REMOVE_FROM_CART":
       let newCart = [...state.cart];
       const index = state.cart.findIndex(
-        (cartItem => cartItem.id === action.id)
+        (cartItem) => cartItem.id === action.id
       );
 
       if (index >= 0) {
@@ -26,7 +25,7 @@ function reducer(state, action) {
       } else {
         console.log("boş");
       }
-      return {...state, cart: newCart}
+      return { ...state, cart: newCart };
       break;
       return { state };
     default:

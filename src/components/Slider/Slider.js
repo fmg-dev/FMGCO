@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./slider.scss";
 import { Link } from "react-router-dom";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
 function Sliders() {
   const [offer, setOffer] = useState([]);
@@ -23,11 +23,8 @@ function Sliders() {
     speed: 1000,
     slidesToShow: 1,
     pauseOnHover: true,
-
-
   };
 
-  
   return (
     <>
       <div className="slider">
@@ -53,7 +50,10 @@ function Sliders() {
                     {readMore
                       ? `${item.description}`
                       : `${item.description.substring(0, 80)}...`}
-                    <Button className="slider__container__text__description__button" onClick={() => setReadMore(!readMore)}>
+                    <Button
+                      className="slider__container__text__description__button"
+                      onClick={() => setReadMore(!readMore)}
+                    >
                       {readMore ? "show less" : "read more"}
                     </Button>
                   </p>

@@ -17,7 +17,9 @@ function Login() {
             placeholder="Password"
             className="login__container__form__input"
           />
-          <Button variant="contained" color="success">LOGIN</Button>
+          <Button variant="contained" color="success">
+            LOGIN
+          </Button>
         </div>
       </div>
     </div>
