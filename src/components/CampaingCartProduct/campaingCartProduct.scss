@@ -1,0 +1,100 @@
+.campaign {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+    color: #2c3e50;
+
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgba($color: #2c3e50, $alpha: 0.2);
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &::-webkit-scrollbar {
+            background: transparent;
+            width: 5px;
+            height: 8px;
+            border-radius: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 6px;
+            background: #2c3e50;
+        }
+
+        &__card {
+            max-width: 100%;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-width: 250px;
+            height: 250px;
+            border: 1px solid rgba($color: #2c3e50, $alpha: 0.2);
+            border-radius: 20px;
+            margin-bottom: 10px;
+            width: 240px;
+            &__buttons {
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    padding: 8px 16px;
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    background: transparent;
+                    cursor: pointer;
+                    margin-right: 10px;
+                    color: #2c3e50;
+                    border-radius: 10px;
+                }
+
+                :hover {
+                    background-color: #2c3e50;
+                    color: white;
+                }
+
+                :active {
+                    color: #2c3e50;
+                    background: white;
+                }
+
+            }
+
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+            }
+
+            img {
+                margin: 10px 0;
+                object-fit: contain;
+                width: 100px;
+                height: 100px;
+            }
+
+        }
+    }
+}

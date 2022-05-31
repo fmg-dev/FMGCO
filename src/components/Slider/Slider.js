@@ -26,6 +26,8 @@ function Sliders() {
 
 
   };
+
+  
   return (
     <>
       <div className="slider">

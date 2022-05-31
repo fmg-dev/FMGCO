@@ -23,7 +23,9 @@ function CartProduct({ id, title, image, price }) {
     <div className="product">
       <>
         <div key={id} className="product__container">
-          <img src={image} alt="" />
+          <div className="product__container__image">
+            <img src={image} alt="" />
+          </div>
           <div className="product__container__text">
             <Link to={`/`}>
               <h4>{title}</h4>
@@ -32,11 +34,14 @@ function CartProduct({ id, title, image, price }) {
             <div className="product__container__text__button">
               <div className="product__container__text__button__left">
                 <AddCircleRoundedIcon className="product__container__text__button__left__icon" />
-                <p>2</p>
+                <p>1</p>
                 <RemoveCircleOutlinedIcon className="product__container__text__button__left__icon" />
               </div>
               <div className="product__container__text__button__right">
-                <button className="product__container__text__button__right__button" onClick={removeFromCart}>
+                <button
+                  className="product__container__text__button__right__button"
+                  onClick={removeFromCart}
+                >
                   <DeleteIcon className="product__container__text__button__right__button__icon" />
                 </button>
               </div>
