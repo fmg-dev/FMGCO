@@ -18,7 +18,7 @@ function App() {
       <Category />
       <Routes>
         <Route index path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/FMGCO" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/cart" element={<Cart />} />

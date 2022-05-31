@@ -11,7 +11,7 @@ function Footer() {
       <div className="footer__left">
         <ul>
           <li className="footer__left__logo">
-            <Link to={"/"}>FMG E-CO</Link>
+            <Link to={"/FMGCO"}>FMG E-CO</Link>
           </li>
           <li>Return policy</li>
           <li>Search out store</li>
